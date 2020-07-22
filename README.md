@@ -2,7 +2,7 @@
 
 Development Docker container for VS&nbsp;Code based on the Codespaces universal development environment.
 
-**To view a formatted version of this document in VS Code type Ctrl+K V** 
+> **To view a formatted version of this document in VS Code type Ctrl+K V**
 
 ## You probably don't need to use this
 
