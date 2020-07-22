@@ -30,11 +30,11 @@ of the *Codespaces* development environment.
 
 Please do read the excellent VS&nbsp;Code documentation in the links above.
 
-1. Install VS&nbsp;Code
+1. Install [VS&nbsp;Code](https://code.visualstudio.com/)
 
-1. Install Docker
+1. Install [Docker](https://docs.docker.com/get-docker/)
 
-1. Install the Remote Development extension pack
+1. Install the [Remote Development extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
 
 1. Clone or download this project
 
