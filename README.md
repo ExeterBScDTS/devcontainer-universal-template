@@ -2,6 +2,8 @@
 
 Development Docker container for VS&nbsp;Code based on the Codespaces universal development environment.
 
+**To view a formated version of this document in VS Code type Ctrl+K V** 
+
 ## You probably don't need to use this
 
 You're welcome to use this template for building software with VS Code in a Docker
@@ -15,7 +17,7 @@ container, but please do check out the documentation here first.
 
 ## Overview
 
-This repository has a ```.devcontainer``` folder which is used by VS Code to create a
+This repository has a ```.devcontainer``` folder which is used by VS&nbsp;Code to create a
 containerized development environment.  The Docker image used as a starting point is
 Microsoft's *universal* image which is the basis of their cloud based *Codespaces*
 product.
