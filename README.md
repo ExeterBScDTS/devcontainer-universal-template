@@ -43,7 +43,7 @@ Please do read the excellent VS&nbsp;Code documentation in the links above.
 1. Open the project folder (File -> Open Folder...)
 
 1. You should be prompted to reopen the folder in a development container  
-![Dialog](vscode-reopen-dialog.png)  
+![Dialog](vscode-reopen-windows.png)  
 If the dialog doesn't appear, or disappears before you click, simply click on the ![&gt;&lt;](vscode-remote-button.png) in the bottom left corner, and select **Remote-Containers: Reopen in Container**.
 
 1. Add your code.  
