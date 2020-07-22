@@ -1,0 +1,38 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.128.0/containers/codespaces-linux
+{
+	"name": "Codespaces",
+	"dockerFile": "Dockerfile",
+	"remoteUser": "codespace",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/home/codespace/workspace,type=bind,consistency=cached",
+	"workspaceFolder": "/home/codespace/workspace",
+	"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
+
+	// Add the IDs of extensions you want installed when the container is created.
+	// Maybe add these
+	//  "ms-vsonline.vsonline",
+	//	"GitHub.vscode-pull-request-github",
+	//	"MS-vsliveshare.vsliveshare",
+	//	"VisualStudioExptTeam.vscodeintellicode",
+	"extensions": [
+		"GitHub.vscode-pull-request-github",
+		"ms-python.python"
+	],
+
+	// Mount the Docker socket so the docker command can be used to run other
+	// containers. Note that these are run on the host, not within this container.
+	// See https://tutorials.releaseworksacademy.com/learn/the-simple-way-to-run-docker-in-docker-for-ci
+
+	"mounts": ["source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"],
+
+	// Set *default* container specific settings.json values on container create.
+	// "settings": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is built.
+	// Note this is only run on a build or rebuild.
+	
+	"postCreateCommand": ".devcontainer/post-create.sh"
+}

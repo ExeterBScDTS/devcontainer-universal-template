@@ -1,0 +1,7 @@
+#
+# Install the required packages with this command -
+# 
+# /opt/python/latest/bin/python -m pip install -r requirements.txt --user
+
+Flask~=1.1.2
+
