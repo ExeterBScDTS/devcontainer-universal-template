@@ -25,10 +25,11 @@ The most widely used web browsers have multimedia capabilities, and can play vid
 
 ```sh
 # To find mounted volumes.
-# Assume we are only running container.
-docker inspect -f "{{ .Mounts }}" `docker ps -q`
+# Assume this development container is the only running container.
+# This should be true when running in Azure Codespaces.
+sudo docker inspect -f "{{ .Mounts }}" `sudo docker ps -q`
 
-docker run --user 1000 -v $(pwd):$(pwd) -w $(pwd) -it --entrypoint='bash' jrottenberg/ffmpeg
+sudo docker run --user 1000 -v $(pwd):$(pwd) -w $(pwd) -it --entrypoint='bash' jrottenberg/ffmpeg
 ```
 
 ## Ffmpeg
