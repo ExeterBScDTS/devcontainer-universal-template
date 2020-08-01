@@ -14,6 +14,7 @@ function App() {
   // interesting trick borrowed from the MDN example (see capture.js),
   // However it's probably not a good idea to use this regularly.
   const [log, setLog] = useState(<></>);
+  const [filename, setFilename] = useState("recording");
 
   let updateLog = (cl: string, msg: string) => {
     logArray.push(<span className={cl}>{msg}<br></br></span>);
@@ -36,8 +37,8 @@ function App() {
   }
 
   function download(){
-    downloadScreenCapture();
-    downloadAudioCapture();
+    downloadScreenCapture(filename);
+    downloadAudioCapture(filename);
   }
 
   return (
@@ -63,6 +64,7 @@ Click the Start Capture button to begin.</p>
       <p>
       <button id="download" onClick={download}>Download</button>
       <button id="upload" >Upload</button>
+      <input type="text" value={filename} onChange={(evt) => {setFilename(evt.target.value)}}/>
       </p>
 
       <video controls muted id="video" autoPlay></video>

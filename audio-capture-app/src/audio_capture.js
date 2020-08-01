@@ -51,7 +51,7 @@ function startAudioCapture() {
     }
 }
 
-function downloadAudioCapture() {
+function downloadAudioCapture(filename) {
     let data = chunks;
     let blob = new Blob(data, { 'type': 'audio/ogg; codecs=opus' });
     let url = URL.createObjectURL(blob);
@@ -59,7 +59,7 @@ function downloadAudioCapture() {
     document.body.appendChild(a);
     a.style = "display: none";
     a.href = url;
-    a.download = "test.ogg";
+    a.download = filename + ".ogg";
     a.click();
     window.URL.revokeObjectURL(url);
 }
