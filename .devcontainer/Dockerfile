@@ -16,3 +16,5 @@ RUN sudo apt-get update \
      && export DEBIAN_FRONTEND=noninteractive \
      && sudo deluser codespace docker \
      && sudo apt-get -y install --no-install-recommends moby-cli
+
+# sudo apt-get -y install azure-functions-core-tools-3
