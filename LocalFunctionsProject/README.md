@@ -15,6 +15,8 @@ docker build --tag msaunby/azurefunctionsimage:v1.0.0 .
 
 docker run -p 8080:80 -it msaunby/azurefunctionsimage:v1.0.0
 
+docker push msaunby/azurefunctionsimage:v1.0.0
+
 az account list-locations
 
 az group create --name AzureFunctionsContainers-rg --location ukwest
@@ -33,7 +35,7 @@ az functionapp create --name <app_name> --storage-account <storage_name> --resou
 ```
 
 ```
-az functionapp create --name containerexptapp --storage-account containerexpt --resource-group AzureFunctionsContainers-rg --plan myPremiumPlan --deployment-container-image-name msaunby/azurefunctionsimage:v1.0.0
+az functionapp create --name containerexptapp ...
 ```
 
 Gives warning
@@ -52,4 +54,18 @@ az storage account show-connection-string --resource-group AzureFunctionsContain
 Result
 ```
 DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=containerexpt;AccountKey=bqjmZBgZd6p57ACG/gU7/hJuc/HKepI/TL2GhhyZ4BoqPoWWNIaK3O6j7ak1HANMiIczkBtWZNQ/DNup0WGU2A==
+```
+
+Follow the instructions to get the function URL.
+
+e.g.
+
+```
+http://containerexptapp.azurewebsites.net/api/HttpExample?code=EJEsqrqSlBAqgjjXWVea3NURmBhcKkXM2/OmP6BW/dAHEA31sXvxYg==&name=sometext
+```
+
+SSH
+
+```
+https://containerexptapp.scm.azurewebsites.net/webssh/host
 ```
