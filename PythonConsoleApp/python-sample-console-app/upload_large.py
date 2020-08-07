@@ -1,6 +1,14 @@
 """Python console app with device flow authentication."""
-# Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license.
-# See LICENSE in the project root for license information.
+
+"""
+Attempts to upload large files via the REST API will be met with a 413 response and the message
+'The maximum request length supported is 4MB.'
+
+For the solution see
+https://docs.microsoft.com/en-us/graph/api/driveitem-createuploadsession?view=graph-rest-1.0
+"""
+
+
 import pprint
 
 import config

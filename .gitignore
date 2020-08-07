@@ -1,3 +1,4 @@
 .vscode/
 ffmpeg/samples/
 azure-functions-core-tools/
+tmp/
