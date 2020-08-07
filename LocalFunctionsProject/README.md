@@ -69,3 +69,5 @@ SSH
 ```
 https://containerexptapp.scm.azurewebsites.net/webssh/host
 ```
+
+https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-ssh-support
