@@ -4,11 +4,14 @@
 Attempts to upload large files via the REST API will be met with a 413 response and the message
 'The maximum request length supported is 4MB.'
 
-For the solution see
+For the solution, and best practices, see
 https://docs.microsoft.com/en-us/graph/api/driveitem-createuploadsession?view=graph-rest-1.0
 
+This code needs improvements to handle errors and cancel the upload.
+
 For an example see 
-https://keathmilligan.net/automate-your-work-with-msgraph-and-python
+https://keathmilligan.net/automate-your-work-with-msgraph-and-
+
 """
 
 
@@ -45,13 +48,12 @@ def upload_large_file(session, *, filename, folder=None):
     result = session.put(api_endpoint(endpoint),
                        json={
             '@microsoft.graph.conflictBehavior': 'replace',
-            'description': 'A large test file',
+            'content-type': content_type,
             'fileSystemInfo': {'@odata.type': 'microsoft.graph.fileSystemInfo'},
             'name': fname_only
         })
     
     if result.ok:
-        print(result, result.json())
         upload_session = result.json()
         upload_url = upload_session['uploadUrl']
 
@@ -77,15 +79,7 @@ def upload_large_file(session, *, filename, folder=None):
                 result.raise_for_status()
                 start += bytes_read
 
-    return None
-
-#    content_type, _ = mimetypes.guess_type(fname_only)
-#    with open(filename, 'rb') as fhandle:
-#        file_content = fhandle.read()
-#
-#    return session.put(api_endpoint(endpoint),
-#                       headers={'content-type': content_type},
-#                       data=file_content)
+    return result
 
 
 def upload_sample(session):
