@@ -21,9 +21,10 @@ docker run -p 8080:80 -it msaunby/azurepyfunctionsimage:v1.0.0
 docker push msaunby/azurepyfunctionsimage:v1.0.0
 ```
 
-app_name containerexptapp
+app_name saunbyffmpeg
 
 storage_name saunby
+
 
 ```
 az storage account create --name saunby --location ukwest --resource-group recordings-rg --sku Standard_LRS
@@ -37,3 +38,32 @@ az functionapp create --name saunbyffmpeg --storage-account saunby --functions-v
 
 az storage account show-connection-string --resource-group recordings-rg --name saunby --query connectionString --output tsv
 ```
+
+### Access Azure storage from local function.
+
+See ```local.settings.json```
+
+```
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobsStorage": ""
+  }
+}
+```
+
+```
+func azure functionapp fetch-app-settings saunbyffmpeg
+```
+
+Now check for new values.
+
+For some reason I needed to fix mine.
+
+```
+"Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+```
+
+Replace ```dotnet``` with ```python```.
