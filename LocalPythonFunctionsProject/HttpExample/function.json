@@ -15,6 +15,14 @@
       "type": "http",
       "direction": "out",
       "name": "$return"
+    },
+    {
+      "name": "inputblob",
+      "type": "blob",
+      "dataType": "binary",
+      "path": "recordings/recording.ogg",
+      "connection": "MyStorageConnectionAppSetting",
+      "direction": "in"
     }
   ]
 }
