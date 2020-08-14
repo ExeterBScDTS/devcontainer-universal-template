@@ -3,9 +3,20 @@ import requests
 payload = {
     "Audio": {
       "FileName":"recording.ogg",
+    },
+    "Video": {
+      "FileName":"recording.ogg",
     }
 }
 
-r = requests.post('http://localhost:7071/api/HttpJsonExample', json=payload)
+azurl = "https://saunbyffmpeg.azurewebsites.net/api/HttpJsonExample?code=tYKxHYMh36lOvMe6EfRw2FTGn2CP0htaahLvJ2c1JMzyO5r9qWHAkQ=="
+lourl = 'http://localhost:7071/api/HttpJsonExample'
+r = requests.post(azurl, json=payload)
+print(r.status_code)
+print(r.text)
+
+azurl = "https://saunbyffmpeg.azurewebsites.net/api/HttpJsonBlobExample?code=tYKxHYMh36lOvMe6EfRw2FTGn2CP0htaahLvJ2c1JMzyO5r9qWHAkQ=="
+lourl = 'http://localhost:7071/api/HttpJsonBlobExample'
+r = requests.post(azurl, json=payload)
 print(r.status_code)
 print(r.text)

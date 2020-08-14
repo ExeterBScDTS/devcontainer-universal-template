@@ -91,3 +91,17 @@ Function name: [HttpTrigger] Writing /home/codespace/workspace/LocalPythonFuncti
 Writing /home/codespace/workspace/LocalPythonFunctionsProject/HttpJsonExample/function.json
 The function "HttpJsonExample" was created successfully from the "HTTP trigger" template.
 ```
+
+## Publish new or modified functions
+
+```sh
+func azure functionapp publish saunbyffmpeg
+```
+
+Might need ```--force``` option.
+
+## Update settings
+
+```
+az functionapp config appsettings set --name saunbyffmpeg --resource-group recordings-rg --settings MyStorageConnectionAppSetting="DefaultEndpointsProtocol=..."
+```
