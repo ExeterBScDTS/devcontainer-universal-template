@@ -67,3 +67,27 @@ For some reason I needed to fix mine.
 ```
 
 Replace ```dotnet``` with ```python```.
+
+### Adding more functions to the container
+
+```
+$ func new --name HttpJsonExample
+Select a number for template:
+1. Azure Blob Storage trigger
+2. Azure Cosmos DB trigger
+3. Durable Functions activity (preview)
+4. Durable Functions HTTP starter (preview)
+5. Durable Functions orchestrator (preview)
+6. Azure Event Grid trigger
+7. Azure Event Hub trigger
+8. HTTP trigger
+9. Azure Queue Storage trigger
+10. Azure Service Bus Queue trigger
+11. Azure Service Bus Topic trigger
+12. Timer trigger
+Choose option: 8
+HTTP trigger
+Function name: [HttpTrigger] Writing /home/codespace/workspace/LocalPythonFunctionsProject/HttpJsonExample/__init__.py
+Writing /home/codespace/workspace/LocalPythonFunctionsProject/HttpJsonExample/function.json
+The function "HttpJsonExample" was created successfully from the "HTTP trigger" template.
+```
