@@ -15,7 +15,8 @@ videoFile.write(video.read(-1))
 
 outFile = tempfile.NamedTemporaryFile(suffix='.mkv')
 # As outFile now exists use -y option to ffmpeg to allow overwriting of this zero length file
-subprocess.call(['ffmpeg', '-y', '-i', audioFile.name, '-i', videoFile.name, '-acodec', 'copy', '-vcodec', 'copy', outFile.name])
+result = subprocess.run(['ffmpeg', '-y', '-i', audioFile.name, '-i', videoFile.name, '-acodec', 'copy', '-vcodec', 'copy', outFile.name], capture_output=True)
+logging.info(result.stderr)
 
 data = outFile.read()
 print(len(data))

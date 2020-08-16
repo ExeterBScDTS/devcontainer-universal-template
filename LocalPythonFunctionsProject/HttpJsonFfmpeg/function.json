@@ -26,6 +26,14 @@
       "path": "recordings/{Video.FileName}",
       "connection": "MyStorageConnectionAppSetting",
       "direction": "in"
+    },
+    {
+      "name": "outputBlob",
+      "type": "blob",
+      "dataType": "binary",
+      "path": "recordings/{Output.FileName}",
+      "connection": "MyStorageConnectionAppSetting",
+      "direction": "out"
     }
   ]
 }
