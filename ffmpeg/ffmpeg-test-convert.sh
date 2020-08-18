@@ -11,8 +11,10 @@ hostdir=/home/mike/github/ExeterBScDTS/devcontainer-universal-template/ffmpeg/sa
 
 docker run --user 1000:1000 -v ${hostdir}:/tmp/workdir -w /tmp/workdir \
         jrottenberg/ffmpeg \
-        -i test.ogg -i test.webm \
+        -i recording.ogg -i recording.webm \
+        -f srt -i recording.srt \
         -acodec copy -vcodec copy  \
+        -c:s srt \
         test-combined.mkv
 
 # To generate mp4 will require transcoding
