@@ -1,0 +1,47 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [ 
+    {
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    },
+    {
+      "name": "audioBlob",
+      "type": "blob",
+      "dataType": "binary",
+      "path": "recordings/{Audio.FileName}",
+      "connection": "MyStorageConnectionAppSetting",
+      "direction": "in"
+    },
+    {
+      "name": "videoBlob",
+      "type": "blob",
+      "dataType": "binary",
+      "path": "recordings/{Video.FileName}",
+      "connection": "MyStorageConnectionAppSetting",
+      "direction": "in"
+    },
+    {
+      "name": "transcriptBlob",
+      "type": "blob",
+      "dataType": "binary",
+      "path": "recordings/{Transcript.FileName}",
+      "connection": "MyStorageConnectionAppSetting",
+      "direction": "in"
+    },
+    {
+      "name": "outputBlob",
+      "type": "blob",
+      "dataType": "binary",
+      "path": "recordings/{Output.FileName}",
+      "connection": "MyStorageConnectionAppSetting",
+      "direction": "out"
+    }
+  ]
+}

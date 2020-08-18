@@ -5,7 +5,7 @@ payload = {
       "FileName":"recording.ogg_insights.json"
     },
     "Transcript": {
-      "FileName":"output.srt"
+      "FileName":"recording.srt"
     }
 
 }
