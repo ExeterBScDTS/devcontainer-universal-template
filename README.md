@@ -15,6 +15,11 @@ container, but please do check out the documentation here first.
 
 <https://visualstudio.microsoft.com/services/visual-studio-codespaces/>
 
+
+### Update - As 13/08/2020 there is more info.
+
+See <https://code.visualstudio.com/docs/remote/create-dev-container>
+
 ## Overview
 
 This repository has a ```.devcontainer``` folder which is used by VS&nbsp;Code to create a
