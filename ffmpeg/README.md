@@ -56,3 +56,27 @@ docker run -v $(pwd):$(pwd) -w $(pwd)\
 ```sh
 ffmpeg -i audio.aiff -i video.mov -acodec copy -vcodec copy -f mp4 avcombined.mp4
 ```
+
+MKV
+
+```sh
+ffmpeg -i recording.ogg -i recording.webm -f srt -i recording.srt -acodec copy -vcodec copy -c:s srt  test-combined.mkv
+```
+
+WEBM replace audio track
+
+See <https://superuser.com/questions/1137612/ffmpeg-replace-audio-in-video>
+
+Here we use copy for the video, but the audio codec is chosen automatically to ensure compatibility with the output
+container.
+
+```sh
+ffmpeg -i v.webm -i a.ogg -c:v copy -map 0:v:0 -map 0:a:0 new.webm
+```
+
+Or specify the audio codec, although most likely this is already Vorbis. 
+
+```sh
+ffmpeg -i v.webm -i a.ogg -c:v copy -c:a libvorbis -map 0:v:0 -map 0:a:0 new.webm
+```
+
