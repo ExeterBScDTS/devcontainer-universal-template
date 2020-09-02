@@ -1,0 +1,16 @@
+{
+    "cSpell.words": [
+        "Codespaces",
+        "devcontainer",
+        "visualstudio"
+    ],
+    "azureFunctions.projectSubpath": "my-vanilla-api/api",
+    "azureFunctions.deploySubpath": "my-vanilla-api/api",
+    "azureFunctions.scmDoBuildDuringDeployment": true,
+    "azureFunctions.pythonVenv": ".venv",
+    "azureFunctions.projectLanguage": "JavaScript",
+    "azureFunctions.projectRuntime": "~3",
+    "azureFunctions.postDeployTask": "npm install",
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureFunctions.preDeployTask": "npm prune"
+}

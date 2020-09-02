@@ -16,7 +16,8 @@
 	//	"VisualStudioExptTeam.vscodeintellicode",
 	"extensions": [
 		"GitHub.vscode-pull-request-github",
-		"ms-python.python"
+		"ms-python.python",
+		"ms-azuretools.vscode-azurefunctions"
 	],
 
 	// Mount the Docker socket so the docker command can be used to run other
