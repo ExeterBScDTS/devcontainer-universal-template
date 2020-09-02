@@ -54,6 +54,8 @@ If the dialog doesn't appear, or disappears before you click, simply click on th
 1. Add your code.  
 There's no need to install Python, Node, Java, etc. as these are already included in the container. See the ```app``` folder for a simple Python web server example.  Note that port forwarding ensures you can access your server.
 
+## Using GitHub
+
 ## Resources
 
 [code.visualstudio.com/docs/remote/containers](https://code.visualstudio.com/docs/remote/containers)
