@@ -56,6 +56,8 @@ There's no need to install Python, Node, Java, etc. as these are already include
 
 ## Using GitHub
 
+See <https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container>
+
 ## Resources
 
 [code.visualstudio.com/docs/remote/containers](https://code.visualstudio.com/docs/remote/containers)
