@@ -20,6 +20,8 @@ container, but please do check out the documentation here first.
 
 See <https://code.visualstudio.com/docs/remote/create-dev-container>
 
+Advanced configuration <https://code.visualstudio.com/docs/remote/containers-advanced>
+
 ## Overview
 
 This repository has a ```.devcontainer``` folder which is used by VS&nbsp;Code to create a
